@@ -1,0 +1,29 @@
+data:
+        system_prompt: "質問に出来る限り詳細に応答してください。\n\n"
+        prompt: "平成時代から令和時代への移行期に見られた社会的、政治的
+な変化を挙げ、その意義について説明してください。"
+        modelname: "/mnt/models/v1-instruct-hf/"
+        lora_path: 
+inference:
+        task: "text-generation"
+        do_sample: True
+        use_cache: False
+        max_seq_len: 
+        min_new_tokens: 1
+        max_new_tokens: 1024
+        temperature: 0.7
+        top_k: 40
+        top_p: 0.9
+        repetition_penalty: 1.15
+        no_repeat_ngram_size: 0
+        num_beams: 
+        num_beam_groups: 
+        diversity_penalty: 0.02
+tokenize:
+        attn_impl: "torch"
+        use_fast: False
+        add_special_tokens: False
+device:
+        device_map: 
+        model_dtype: "bf16"
+        trust_remote_code: True
